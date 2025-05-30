@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --font-sora: "Sora", sans-serif;
+  --font-code: "Source Code Pro", monospace;
+  --font-grotesk: "Space Grotesk", sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-[#0E0C15] text-[#FFFFFF] text-base;
+  }
+}
+
+@theme {
+  --color-c1: #AC6AFF;
+  --color-c2: #FFC876;
+  --color-c3: #FF776F;
+  --color-c4: #7ADB78;
+  --color-c5: #858DFF;
+  --color-c6: #FF98E2;
+  
+  --color-n1: #FFFFFF;
+  --color-n2: #CAC6DD;
+  --color-n3: #ADA8C3;
+  --color-n4: #757185;
+  --color-n5: #3F3A52;
+  --color-n6: #252134;
+  --color-n7: #15131D;
+  --color-n8: #0E0C15;
+  --color-n9: #474060;
+  --color-n10: #43435C;
+  --color-n11: #1B1B2E;
+  --color-n12: #2E2A41;
+  --color-n13: #6C7275;
+}
