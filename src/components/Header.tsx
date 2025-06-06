@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HamburgerMenu } from "./HamburgerMenu";
 import { useLocation } from "react-router-dom";
 import MenuSvg from "../assets/MenuSvg";
@@ -52,6 +52,7 @@ const navigation = [
 export const Header = () => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleNavigation = () => {
     if (openNavigation) {
@@ -66,9 +67,19 @@ export const Header = () => {
     setOpenNavigation(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 border-b border-n6 lg:bg-n8/90 lg:backdrop-blur-sm ${
+      className={`fixed top-0 left-0 w-full z-50 border-b border-n6 lg:bg-n8/90 lg:backdrop-blur-sm 
+        ${
         openNavigation ? "bg-n8" : "bg-n8/90 backdrop-blur-sm"
       }`}
     >

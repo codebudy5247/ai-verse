@@ -4,6 +4,7 @@ import { TestLandingg } from "./components/TestLandingg";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { ButtonGradient } from "./assets/ButtonGradient";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       {/* <TestLandingg /> */}
       {/* <AINexusLanding /> */}
 
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+      <div className="min-h-screen overflow-hidden">
         <Header />
         <Hero />
       </div>

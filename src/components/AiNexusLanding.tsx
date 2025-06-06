@@ -16,7 +16,7 @@ const AINexusLanding = () => {
   return (
     <div className="min-h-screen bg-[#0a0e17] text-gray-200 overflow-x-hidden">
       {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0a0e17] py-3 border-b border-cyan-500/20' : 'bg-transparent py-5'}`}>
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0a0e17] py-3' : 'bg-transparent py-5'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
@@ -124,7 +124,7 @@ const AINexusLanding = () => {
         </div>
         
         <div className="container mx-auto px-6 relative z-20 text-center">
-          <div className="inline-block bg-[#1a1f2d] border border-cyan-500 rounded-full px-6 py-2 mb-6">
+          {/* <div className="inline-block bg-[#1a1f2d] border border-cyan-500 rounded-full px-6 py-2 mb-6">
             <span className="flex items-center text-cyan-400">
               <span className="flex h-2 w-2 mr-2">
                 <span className="animate-ping absolute h-2 w-2 rounded-full bg-cyan-400 opacity-75"></span>
@@ -132,7 +132,7 @@ const AINexusLanding = () => {
               </span>
               Pioneering AI since 2023
             </span>
-          </div>
+          </div> */}
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight font-orbitron">
             Where <span className="text-cyan-400">AI Experimentation</span> Meets 
