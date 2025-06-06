@@ -78,10 +78,9 @@ export const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 border-b border-n6 lg:bg-n8/90 lg:backdrop-blur-sm 
-        ${
-        openNavigation ? "bg-n8" : "bg-n8/90 backdrop-blur-sm"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 border-b border-n6 transition-colors duration-300
+    ${isScrolled ? "bg-n8/90 backdrop-blur-sm" : "bg-transparent"}
+  `}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         {/* Logo */}
@@ -92,7 +91,7 @@ export const Header = () => {
           </h1>
         </div>
 
-        {/* Desktop Navigation & Mobile Menu */}
+        {/* Navigation */}
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
@@ -121,7 +120,7 @@ export const Header = () => {
         </nav>
 
         <div className="hidden lg:flex ml-4">
-          <Button href="#login">SIGN IN</Button>
+          <Button href="#login">Get Started</Button>
         </div>
 
         <Button

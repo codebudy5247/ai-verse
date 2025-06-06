@@ -2,10 +2,11 @@ import PlusSvg from "../assets/PlusSvg";
 import Button from "./Button";
 import curve from "../assets/curve.png";
 import robot from "../assets/robot.jpg";
+import bgVideo from "../assets/herovid3.mp4"
 
 export const Hero = () => {
   return (
-    <section className="relative z-10 h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative z-10 min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Video & Overlay */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e17]/90 to-[#0a0e17]/60"></div>
@@ -16,7 +17,7 @@ export const Hero = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="https://res.cloudinary.com/dmazwfofy/video/upload/v1746553741/2324166-uhd_3840_2160_25fps_mva6wk.mp4" />
+          <source src={bgVideo} />
         </video>
       </div>
 
