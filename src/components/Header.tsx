@@ -121,7 +121,7 @@ export const Header = () => {
         </nav>
 
         <div className="hidden lg:flex ml-4">
-          <Button href="#login">Get Started</Button>
+          <Button href="#login">SIGN IN</Button>
         </div>
 
         <Button
