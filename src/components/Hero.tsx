@@ -15,7 +15,7 @@ export const Hero = () => {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
         >
           <source src={bgVideo} />
         </video>
