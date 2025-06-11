@@ -22,6 +22,15 @@ const fadeInRight = {
   },
 };
 
+const paragraphFade = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.5, duration: 0.6, ease: "easeOut" },
+  },
+};
+
 export const Hero = () => {
   return (
     <section className="relative pt-20 lg:pt-24 overflow-hidden">
@@ -57,29 +66,46 @@ export const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+          <motion.p
+            className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto"
+            variants={paragraphFade}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+          >
             We bridge the gap between AI theory and practical application
             through cutting-edge research, transformative education, and
             intelligent products that shape the future.
-          </p>
-
-          <Button href="/pricing" white>
-            Get started
-          </Button>
+          </motion.p>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button href="/pricing" white>
+              Get started
+            </Button>
+          </motion.div>
         </motion.div>
 
         {/* Animated Hero Image */}
         <motion.div
           className="relative flex flex-1 lg:w-1/2 max-w-3xl mx-auto lg:mx-0 lg:max-w-full"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-          variants={fadeInRight}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         >
-          <img
+          <motion.img
             src={HeroImg}
             alt="Hero image"
             className="w-full h-auto lg:h-full object-contain rounded-3xl"
+            initial={{ scale: 0.95 }}
+            animate={{
+              scale: [1, 1.02, 1],
+              y: [0, -10, 0],
+              rotate: [0, 1, -1, 0],
+            }}
+            transition={{
+              duration: 6,
+              ease: "easeInOut",
+              repeat: Infinity,
+            }}
           />
         </motion.div>
       </Container>
