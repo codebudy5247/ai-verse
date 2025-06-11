@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { HamburgerMenu } from "./HamburgerMenu";
 import { useLocation } from "react-router-dom";
 import MenuSvg from "../assets/MenuSvg";
-import Button from "./Button";
+import Button from "./shared/Button";
 
 const navigation = [
   {
@@ -78,12 +78,11 @@ export const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 border-b border-n6 transition-colors duration-300
-    ${isScrolled ? "bg-n8/90 backdrop-blur-sm" : "bg-transparent"}
-  `}
+      className={`fixed top-0 left-0 w-full z-50  border-b border-n6 lg:bg-n8/90 lg:backdrop-blur-sm ${
+        openNavigation ? "bg-n8" : "bg-n8/90 backdrop-blur-sm"
+      }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        {/* Logo */}
         <div className="flex items-center">
           <div className="bg-gradient-to-r from-cyan-600 to-blue-700 w-10 h-10 rounded-lg mr-3"></div>
           <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 font-orbitron">
@@ -91,7 +90,6 @@ export const Header = () => {
           </h1>
         </div>
 
-        {/* Navigation */}
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"

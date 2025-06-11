@@ -1,6 +1,6 @@
 import React from "react";
 import type { MouseEvent, ReactNode } from "react";
-import ButtonSvg from "../assets/ButtonSvg";
+import ButtonSvg from "../../assets/ButtonSvg";
 
 interface ButtonProps {
   className?: string;
