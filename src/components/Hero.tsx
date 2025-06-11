@@ -23,17 +23,17 @@ const paragraphFade = {
 
 export const Hero = () => {
   return (
-    <section className="relative h-screen pt-20 overflow-hidden">
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 h-full items-center justify-center">
+    <section className="relative min-h-screen pt-20 overflow-hidden flex items-center justify-center">
+      <div className="max-w-7xl w-full px-4 lg:px-8 mx-auto flex flex-col lg:flex-row gap-8 lg:gap-10 items-center justify-center">
         {/* Background gradients */}
         <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 pointer-events-none">
-          <span className="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-gradient-to-r from-blue-600 to-violet-600 blur-xl opacity-60 lg:opacity-95 hidden lg:block"></span>
-          <span className="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-primary blur-xl opacity-80"></span>
+          <span className="absolute -left-6 md:left-4 top-24 lg:top-28 w-40 h-40 rotate-90 skew-x-12 rounded-3xl bg-gradient-to-r from-blue-600 to-violet-600 blur-xl opacity-60 lg:opacity-95 hidden lg:block"></span>
+          <span className="absolute right-4 bottom-12 w-40 h-40 rounded-3xl bg-primary blur-xl opacity-80"></span>
         </div>
 
         {/* Animated Text Section */}
         <motion.div
-          className="relative flex flex-col items-center text-center lg:text-left lg:items-start lg:flex-1 lg:w-1/2"
+          className="relative flex flex-col items-center text-center lg:text-left lg:items-start lg:flex-1"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -49,7 +49,7 @@ export const Hero = () => {
                 Innovation
                 <img
                   src={curve}
-                  className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[500px] max-w-full"
+                  className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[300px] max-w-full"
                   alt="Curve underline"
                 />
               </span>
@@ -67,6 +67,7 @@ export const Hero = () => {
             through cutting-edge research, transformative education, and
             intelligent products that shape the future.
           </motion.p>
+
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button href="/pricing" white>
               Get started
@@ -76,7 +77,7 @@ export const Hero = () => {
 
         {/* Animated Hero Image */}
         <motion.div
-          className="relative flex flex-1 w-full h-[90%] ml-3.5"
+          className="relative flex flex-1 w-full max-w-md lg:max-w-lg"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -84,10 +85,10 @@ export const Hero = () => {
           <motion.img
             src={HeroImg}
             alt="Hero image"
-            className="w-full h-full object-contain rounded-3xl"
+            className="w-full h-[350px] object-contain rounded-3xl"
             initial={{ scale: 0.95 }}
             animate={{
-              scale: [1, 1.02, 1],
+              scale: [1.2, 1.04, 1.2], // 1.1.02,1
               y: [0, -10, 0],
               rotate: [0, 1, -1, 0],
             }}

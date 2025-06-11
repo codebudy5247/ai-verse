@@ -17,7 +17,7 @@ function App() {
       <div className="min-h-screen overflow-hidden">
         <Header />
         <Hero />
-        {/* <Manifesto /> */}
+        <Manifesto />
 
       </div>
 
