@@ -2,6 +2,7 @@ import curve from "../assets/curve.png";
 import Button from "./shared/Button";
 import HeroImg from "../assets/4-small.png";
 import { motion } from "motion/react";
+import { VantaNetBackground } from "./VantaNetBg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -24,12 +25,13 @@ const paragraphFade = {
 export const Hero = () => {
   return (
     <section className="relative min-h-screen pt-20 overflow-hidden flex items-center justify-center">
+      <VantaNetBackground />
       <div className="max-w-7xl w-full px-4 lg:px-8 mx-auto flex flex-col lg:flex-row gap-8 lg:gap-10 items-center justify-center">
         {/* Background gradients */}
-        <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 pointer-events-none">
+        {/* <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 pointer-events-none">
           <span className="absolute -left-6 md:left-4 top-24 lg:top-28 w-40 h-40 rotate-90 skew-x-12 rounded-3xl bg-gradient-to-r from-blue-600 to-violet-600 blur-xl opacity-60 lg:opacity-95 hidden lg:block"></span>
           <span className="absolute right-4 bottom-12 w-40 h-40 rounded-3xl bg-primary blur-xl opacity-80"></span>
-        </div>
+        </div> */}
 
         {/* Animated Text Section */}
         <motion.div
@@ -85,10 +87,10 @@ export const Hero = () => {
           <motion.img
             src={HeroImg}
             alt="Hero image"
-            className="w-full h-[350px] object-contain rounded-3xl"
+            className="w-full h-[400px] object-contain rounded-3xl"
             initial={{ scale: 0.95 }}
             animate={{
-              scale: [1.2, 1.04, 1.2], // 1.1.02,1
+              scale: [1,1.02,1], // 1.1.02,1  [1.2, 1.04, 1.2]
               y: [0, -10, 0],
               rotate: [0, 1, -1, 0],
             }}
